@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas del mismo tamaño */
+    grid-template-rows: auto 5vh 70vh 12vh; /* Alturas de las filas */
+}
+
+header{
+    grid-column: 1/4;
+    
+    height: 10vh;
+    color: white;
+    background-color: black;
+    padding-left: 10px;
+}
+
+nav {
+    grid-column: 1 / 4;
+    height: 5vh;
+    background-color: gray;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    flex-grow: 1; /* Para que los elementos <a> se extiendan */
+}
+
+main{
+    grid-column: 1/3;
+    height: 70vh;
+    color: black;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+.right-content{
+    grid-column: 3/4;
+    color: black;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+footer{
+    grid-column: 1/4;
+    height: 12vh;
+    color: white;
+    background-color: lightslategray;
+    padding: 10px;
+}
