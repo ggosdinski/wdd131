@@ -1,0 +1,173 @@
+/* .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+   */
+
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    max-width: 80%; /* Cambiado para que se adapte mejor en pantallas pequeñas */
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    padding: 30px;
+}
+
+strong {
+    color: #287086;
+}
+
+nav {
+    background-color: #287086;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0; /* Asegúrate de que no haya padding en el ul */
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    background-color: #96C0D0;
+    color: black;
+}
+
+.active {
+    background-color: #96C0D0;
+    color: black;
+}
+
+.card {
+    border: 1px solid gainsboro;
+    border-radius: 20px;
+}
+
+.content {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr; /* Cambiado para una sola columna en móviles */
+    gap: 20px;
+}
+
+.card1 p {
+    text-align: left;
+}
+
+/* Grid de la primera tarjeta */
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr; /* Por defecto en móviles */
+    gap: 10px;
+    padding: 10px;
+}
+
+.section {
+    background-color: #287086;
+    color: #fff;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.image-container {
+    padding: 10px;
+}
+
+.image-container img {
+    width: 200px; /* Mantener el ancho máximo al 100% */
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+h3{
+    text-align: left;
+}
+.resources {
+    list-style-type: none;
+    margin-top: 20px; /* Menor margen superior */
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 640px) {
+    .content {
+        grid-template-columns: 1fr auto; /* Dos columnas en pantallas medianas */
+    }
+
+    .grid2 {
+        grid-template-columns:  2fr; /* Dos columnas para el grid en card1 */
+        border: 1px solid red;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 auto; /* Flexibilidad para los elementos del menú */
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .image-container {
+        text-align: center; /* Centrar la imagen en pantallas pequeñas */
+    }
+    
+    .image-container img {
+        max-width: 80%; /* Ajustar el ancho de la imagen */
+        height: auto; /* Mantener la relación de aspecto */
+    }
+
+    .secondp{
+        text-align: left;
+    }
+}
