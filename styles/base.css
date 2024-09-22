@@ -136,7 +136,7 @@ h3{
 }
 .resources {
     list-style-type: none;
-    margin-top: 20px; /* Menor margen superior */
+    margin: 20px; /* Menor margen superior */
 }
 
 footer{
@@ -149,7 +149,7 @@ footer{
 /* Media Queries para pantallas más grandes */
 @media (min-width: 640px) {
     .content {
-        grid-template-columns: 1fr auto; /* Dos columnas en pantallas medianas */
+        grid-template-columns: 2fr 1fr; /* Dos columnas en pantallas medianas */
     }
 
     .grid2 {
