@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    padding: 15px;
+    margin-bottom: 20px; /* Aumenta el margen inferior para más espacio */
+}
+
+header {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Ajusta para tener más espacio a la derecha */
+    padding: 10px;
+    background-color: #287086;
+    color: #fff;
+}
+
+.open-menu, .close-menu {
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    display: block; /* Mostramos el botón de abrir */
+}
+
+.close-menu {
+    display: none; /* Ocultamos el botón de cerrar inicialmente */
+}
+
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alineamos el menú al centro */
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #287086; /* Fondo para el menú */
+    width: 100%; /* Asegura que el menú use el ancho completo del header */
+    transition: opacity 0.3s ease; /* Animación para la aparición del menú */
+}
+
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list {
+    flex-direction: column; /* Los enlaces del menú en columna */
+    align-items: center; /* Alineamos los enlaces al centro */
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.nav-list li a:hover {
+    background-color: #145a72; 
+    border-radius: 5px; 
+    color: #f0f0f0; 
+}
+
+main {
+    text-align: center;   
+}
+
+h2 {
+    padding: 20px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr; /* En pantallas pequeñas, una sola columna */
+    gap: 20px;
+    padding: 10px;
+} 
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; 
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* animación suave en hover */
+}
+
+img:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+footer {
+    background-color: #287086;
+    color: #fff;
+    padding: 10px;
+}

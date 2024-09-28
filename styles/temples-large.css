@@ -1,0 +1,45 @@
+@media screen and (min-width: 751px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: #287086;
+        color: #fff;
+        align-items: center;
+    }
+    
+    h1{
+       
+        width: auto;
+    }
+
+    .nav {
+        display: flex; /* Aseguramos que el menú esté visible */
+        flex-direction: end; /* Menú en línea */
+        opacity: 1; /* Aseguramos que el menú sea visible */
+        visibility: visible; /* Aseguramos que el menú sea visible */
+        gap: 1rem; /* Espacio entre elementos del menú */
+        
+        max-width: 600px;;
+    }
+
+    .nav-list {
+        display: flex;   
+        flex-direction: row; /* Los enlaces del menú en fila */
+    }
+
+    .open-menu{
+        display: none;
+    }
+    
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* En pantallas grandes, tres columnas */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 300px; 
+    }
+}
