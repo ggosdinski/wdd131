@@ -1,8 +1,9 @@
 :root {
-    --1-color: #73ACDF;
-    --2-color: white;
-    --3-color: #F6B50E;
+    --color-1: #73ACDF; /* Color azul */
+    --color-2: white; /* Color blanco */
+    --color-3: #F6B50E; /* Color amarillo */
 }
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -11,12 +12,12 @@ body {
 }
 
 header {
-    background-color: var(--1-color);
+    background-color: var(--color-1);
     padding: 20px 40px;
 }
 
 h1 {
-    color: var( --2-color);
+    color: var( --color-2);
     text-align: center;
 }
 
@@ -44,27 +45,28 @@ h2 img {
 }
 
 .info-section {
-    background-color: var( --2-color);
+    background-color: var( --color-2);
     text-align: center;
     margin-bottom: 3px;
 }
 
 footer {
     margin-top: 2px;
-    background-color: var(--1-color);
+    background-color: var(--color-1);
     text-align: center;
-    color: var( --2-color);
+    color: var( --color-2);
     padding: 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 800px) {
     .spacer {
-        background-color: var(--3-color);
+        background-color: var(--color-3);
     }
 
     main {
-        background-color: var(--3-color);
+        background-color: var(--color-3);
         position: relative;
     }
 
@@ -76,7 +78,7 @@ footer {
     }
 
     h2 {
-        background-color: var(--3-color);
+        background-color: var(--color-3);
         color: white;
         margin-left: -5px;
         width: 140px;
