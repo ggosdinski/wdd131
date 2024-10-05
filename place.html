@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Argentina</title>
+    <link rel="stylesheet" href="./styles/place.css">
+</head>
+
+<body>
+    <header>
+        <h1>Argentina 🇦🇷</h1>
+    </header>
+
+    <div class="spacer"></div>
+    <main>
+        <picture class="hero-image">
+            <source srcset="images/big2.webp" media="(min-width: 800px)">
+            <img src="./images/small.webp" alt="View of Argentina" width="500" height="250">
+        </picture>
+
+        <section class="info-section data-info">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 2.780.400 km²</p>
+            <p><strong>Population:</strong> 46.6 millions</p>
+            <p><strong>Capital:</strong> Buenos Aires</p>
+            <p><strong>Language:</strong> Spanish</p>
+            <p><strong>Currency:</strong> ARS</p>
+            <p><strong>Time Zone:</strong> GMT-3</p>
+            <p><strong>Calling Code:</strong> +54</p>
+            <p><strong>Internet TLD:</strong> .ar</p>
+        </section>
+
+        <section class="info-section weather-info">
+            <h2>Weather <span><img src="./images/weatherMobile.svg" alt="weather icon"></span></h2>
+            <p><strong>Temperature:</strong> <span id="temperature">25 Celsius
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> <span id="windSpeed">15</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="feelsLike"></span></p>
+        </section>
+    </main>
+
+    <footer >
+        <p>&copy; <span id="currentyear"></span> Gianfranco Gosdinski. Buenos Aires, Argentina</p>
+        <p id="lasModified"></p>
+    </footer>
+
+    <script src="./scripts/getdates.js"></script>
+    <script src="./scripts/place.js"></script>
+</body>
+
+</html>

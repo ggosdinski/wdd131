@@ -1,0 +1,6 @@
+/* Mantener la relación de aspecto. Se aplica sobre la imagen, no sobre el contenedor */
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
