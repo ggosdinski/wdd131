@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    padding: 10px;
+}
+
+main{
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+img{
+    background: black;
+    animation: fade 8s;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+         opacity: 1;
+    }
+}
