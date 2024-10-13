@@ -35,7 +35,7 @@ const aCourse = {
         displaySections(this.sections); // Llama a la función displaySections para mostrar los datos en pantalla
     }
 };
-
+  
 /* console.log(aCourse.sections[1]); */
 
 function setCourse(course){

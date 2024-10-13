@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    padding: 15px;
+    margin-bottom: 20px; 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #287086;
+    color: #fff;
+}
+
+.open-menu, .close-menu {
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    display: block; 
+}
+
+.close-menu {
+    display: none; 
+}
+
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #287086;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list {
+    flex-direction: column;
+    align-items: center; 
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.nav-list li a:hover {
+    background-color: #145a72;
+    border-radius: 5px; 
+}
+
+main {
+    text-align: center;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.temple-card {
+    padding: 10px;
+}
+
+.temple-card img {
+    width: 100%;
+    height: 250px;    
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+/* Ajustes de espacio para el texto en las tarjetas */
+.temple-card h3 {
+    margin: 5px 0; /* Espacio reducido entre el título y el texto */
+    font-size: 1.25rem; /* Título de la tarjeta */
+}
+
+.temple-card p {
+    margin: 3px 0; 
+    font-size: 0.9rem; 
+    line-height: 1.3; 
+}
+
+footer{
+    padding: 10px;
+    background-color: #287086;
+    color: #fff;
+
+}
