@@ -1,0 +1,6267 @@
+
+    <html>
+    <head>
+        <title>Resultados de Combinaciones de Edificios</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            #filter { margin-bottom: 20px; }
+        </style>
+        <script>
+            function filtrarTecnico() {
+                var tecnicoSeleccionado = document.getElementById('tecnicoSelect').value;
+                var rows = document.querySelectorAll('table tbody tr');
+                var totalKm = 0;
+                var totalCombinaciones = 0;
+
+                rows.forEach(function(row) {
+                    var tecnico = row.cells[0].innerText;
+                    if (tecnicoSeleccionado === 'todos' || tecnico === tecnicoSeleccionado) {
+                        row.style.display = '';
+                        totalKm += parseFloat(row.cells[7].innerText);
+                        totalCombinaciones++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                document.getElementById('totalKm').innerText = totalKm.toLocaleString() + ' km';
+                document.getElementById('totalCombinaciones').innerText = totalCombinaciones.toLocaleString();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Resultados de Combinaciones de Edificios</h1>
+        <label for="tecnicoSelect">Seleccionar Técnico:</label>
+        <select id="tecnicoSelect" onchange="filtrarTecnico()">
+            <option value="todos">Todos</option>
+    <option value="Adina Bautista Roncal">Adina Bautista Roncal</option><option value="Cesar Oruna Murillo">Cesar Oruna Murillo</option><option value="Dallin Chacon Alvarado">Dallin Chacon Alvarado</option><option value="Edwin España">Edwin España</option><option value="Fidel Huaman">Fidel Huaman</option><option value="FMG Limatambo">FMG Limatambo</option><option value="Gustavo Herrera">Gustavo Herrera</option><option value="Jeffery Arroyo Chunga">Jeffery Arroyo Chunga</option><option value="Juan Carlos Flores">Juan Carlos Flores</option><option value="Luis Lorenzo Alarcón">Luis Lorenzo Alarcón</option><option value="Manuel Fernandez Bramon">Manuel Fernandez Bramon</option><option value="Marcelo Perez">Marcelo Perez</option><option value="Mauricio Dipaz">Mauricio Dipaz</option><option value="Miguel Ascarruz">Miguel Ascarruz</option><option value="Nefi Luchini">Nefi Luchini</option><option value="Vacante">Vacante</option><option value="Walter Castro">Walter Castro</option>
+        </select>
+        <h3>Total de Kilómetros: <span id="totalKm">16,821 km</span></h3>
+        <h3>Total de Combinaciones: <span id="totalCombinaciones">564</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Técnico</th>
+                    <th>Edificio 1</th>
+                    <th>Latitud 1</th>
+                    <th>Longitud 1</th>
+                    <th>Edificio 2</th>
+                    <th>Latitud 2</th>
+                    <th>Longitud 2</th>
+                    <th>Distancia Total (km)</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Pueblo Libre</td>
+                <td>-7.163923</td>
+                <td>-78.507047</td>
+                <td>Baños del Inca</td>
+                <td>-7.16625051</td>
+                <td>-78.46121152</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Pueblo Libre</td>
+                <td>-7.163923</td>
+                <td>-78.507047</td>
+                <td>Cajamarca</td>
+                <td>-7.16080436</td>
+                <td>-78.51580739</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Pueblo Libre</td>
+                <td>-7.163923</td>
+                <td>-78.507047</td>
+                <td>Celendín (Alquiler)</td>
+                <td>-6.860917</td>
+                <td>-78.147408</td>
+                <td>106</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Pueblo Libre</td>
+                <td>-7.163923</td>
+                <td>-78.507047</td>
+                <td>Chontapaccha</td>
+                <td>-7.14977992</td>
+                <td>-78.51672236</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Pueblo Libre</td>
+                <td>-7.163923</td>
+                <td>-78.507047</td>
+                <td>Aeropuerto</td>
+                <td>-7.15237583</td>
+                <td>-78.51044765</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Baños del Inca</td>
+                <td>-7.16625051</td>
+                <td>-78.46121152</td>
+                <td>Cajamarca</td>
+                <td>-7.16080436</td>
+                <td>-78.51580739</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Baños del Inca</td>
+                <td>-7.16625051</td>
+                <td>-78.46121152</td>
+                <td>Celendín (Alquiler)</td>
+                <td>-6.860917</td>
+                <td>-78.147408</td>
+                <td>107</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Baños del Inca</td>
+                <td>-7.16625051</td>
+                <td>-78.46121152</td>
+                <td>Chontapaccha</td>
+                <td>-7.14977992</td>
+                <td>-78.51672236</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Baños del Inca</td>
+                <td>-7.16625051</td>
+                <td>-78.46121152</td>
+                <td>Aeropuerto</td>
+                <td>-7.15237583</td>
+                <td>-78.51044765</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Cajamarca</td>
+                <td>-7.16080436</td>
+                <td>-78.51580739</td>
+                <td>Celendín (Alquiler)</td>
+                <td>-6.860917</td>
+                <td>-78.147408</td>
+                <td>105</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Cajamarca</td>
+                <td>-7.16080436</td>
+                <td>-78.51580739</td>
+                <td>Chontapaccha</td>
+                <td>-7.14977992</td>
+                <td>-78.51672236</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Cajamarca</td>
+                <td>-7.16080436</td>
+                <td>-78.51580739</td>
+                <td>Aeropuerto</td>
+                <td>-7.15237583</td>
+                <td>-78.51044765</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Celendín (Alquiler)</td>
+                <td>-6.860917</td>
+                <td>-78.147408</td>
+                <td>Chontapaccha</td>
+                <td>-7.14977992</td>
+                <td>-78.51672236</td>
+                <td>106</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Celendín (Alquiler)</td>
+                <td>-6.860917</td>
+                <td>-78.147408</td>
+                <td>Aeropuerto</td>
+                <td>-7.15237583</td>
+                <td>-78.51044765</td>
+                <td>105</td>
+            </tr>
+        
+            <tr>
+                <td>Adina Bautista Roncal</td>
+                <td>Chontapaccha</td>
+                <td>-7.14977992</td>
+                <td>-78.51672236</td>
+                <td>Aeropuerto</td>
+                <td>-7.15237583</td>
+                <td>-78.51044765</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>31</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>39</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>24</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>39</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>PUENTE PIEDRA</td>
+                <td>-11.86243552</td>
+                <td>-77.07869481</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>46</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>24</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>41</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>Santa Rosa</td>
+                <td>-11.79357439</td>
+                <td>-77.15842332</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>48</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>44</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>51</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>50</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>VILLAS DE ANCON (Alquiler)</td>
+                <td>-11.748166</td>
+                <td>-77.146546</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>57</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>ZAPALLAL 2</td>
+                <td>-11.83083673</td>
+                <td>-77.11156532</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>44</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>29</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>LOS ROSALES</td>
+                <td>-11.81596106</td>
+                <td>-77.13895903</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>29</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>MARQUEZ</td>
+                <td>-11.94423305</td>
+                <td>-77.13078784</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>NARANJAL</td>
+                <td>-11.9715794</td>
+                <td>-77.08667277</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>44</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>NAVAL</td>
+                <td>-11.89498363</td>
+                <td>-77.1287894</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Cesar Oruna Murillo</td>
+                <td>OQUENDO, Alquiler</td>
+                <td>-11.97203</td>
+                <td>-77.124689</td>
+                <td>RESIDENCIAL</td>
+                <td>-12.00364</td>
+                <td>-77.106726</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Buenos Aires</td>
+                <td>-11.96103008</td>
+                <td>-76.99976606</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Grande</td>
+                <td>-11.97105871</td>
+                <td>-77.00137395</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Nuevo</td>
+                <td>-11.980105</td>
+                <td>-77.015127</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Canto Rey</td>
+                <td>-11.97826398</td>
+                <td>-76.99525871</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>El Valle  Alquiler</td>
+                <td>-11.923089</td>
+                <td>-76.958956</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-11.96562601</td>
+                <td>-76.99019058</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Mariategui</td>
+                <td>-11.940326575</td>
+                <td>-76.990241577</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Mariscal Cáceres</td>
+                <td>-11.95836248</td>
+                <td>-76.98626682</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Dallin Chacon Alvarado</td>
+                <td>Valle Sagrado</td>
+                <td>-11.95595687</td>
+                <td>-77.00190857</td>
+                <td>Wiesse</td>
+                <td>-11.941487444</td>
+                <td>-76.98020699</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>SAN LUIS</td>
+                <td>-12.070346</td>
+                <td>-76.997133</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>La Victoria</td>
+                <td>-12.07437</td>
+                <td>-77.010802</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>CERCADO</td>
+                <td>-12.04647035</td>
+                <td>-77.03684446</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>El Porvenir</td>
+                <td>-12.065183</td>
+                <td>-77.025025</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>INGENIERIA</td>
+                <td>-12.03320278</td>
+                <td>-77.04796673</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA CULTURA</td>
+                <td>-12.08113119</td>
+                <td>-77.01137557</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>26</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>LA MOLINA VIEJA</td>
+                <td>-12.087919</td>
+                <td>-76.949793</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>24</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>MONTERRICO</td>
+                <td>-12.104101</td>
+                <td>-76.974109</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>RIMAC 1, &</td>
+                <td>-12.01801858</td>
+                <td>-77.0339462</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Edwin España</td>
+                <td>RIMAC 2</td>
+                <td>-12.03413929</td>
+                <td>-77.0345801</td>
+                <td>SALAMANCA</td>
+                <td>-12.079442</td>
+                <td>-76.981192</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>58</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>75</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJA DE AGUA</td>
+                <td>-12.026896</td>
+                <td>-77.01217326</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>83</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>46</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>63</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>32</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CAJAMARQUILLA (Alquiler)</td>
+                <td>-11.997075</td>
+                <td>-76.907551</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>60</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>60</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>CHACLACAYO</td>
+                <td>-11.977542</td>
+                <td>-76.76693</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>68</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>77</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>60</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>60</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>El Sol</td>
+                <td>-11.936964</td>
+                <td>-76.698243</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>68</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>44</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>ITALIA</td>
+                <td>-12.054629</td>
+                <td>-77.021777</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>85</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>LA MOLINA</td>
+                <td>-12.07218221</td>
+                <td>-76.93782403</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>68</td>
+            </tr>
+        
+            <tr>
+                <td>Fidel Huaman</td>
+                <td>PRADERAS (Alquiler)</td>
+                <td>-12.003036</td>
+                <td>-76.834978</td>
+                <td>PUENTE PALOMAR</td>
+                <td>-11.919051</td>
+                <td>-76.66764</td>
+                <td>68</td>
+            </tr>
+        
+            <tr>
+                <td>FMG Limatambo</td>
+                <td>VALLECITO</td>
+                <td>-14.26439334</td>
+                <td>-71.22766102</td>
+                <td>SAN JUAN</td>
+                <td>-12.155635</td>
+                <td>-76.976261</td>
+                <td>1344</td>
+            </tr>
+        
+            <tr>
+                <td>FMG Limatambo</td>
+                <td>VALLECITO</td>
+                <td>-14.26439334</td>
+                <td>-71.22766102</td>
+                <td>VISTA ALEGRE</td>
+                <td>-13.53213581</td>
+                <td>-71.92501237</td>
+                <td>222</td>
+            </tr>
+        
+            <tr>
+                <td>FMG Limatambo</td>
+                <td>SAN JUAN</td>
+                <td>-12.155635</td>
+                <td>-76.976261</td>
+                <td>VISTA ALEGRE</td>
+                <td>-13.53213581</td>
+                <td>-71.92501237</td>
+                <td>1137</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>29</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LAS PALMERAS</td>
+                <td>-11.989732</td>
+                <td>-77.06803</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS PORTALES</td>
+                <td>-11.94131928</td>
+                <td>-77.07537902</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>32</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>30</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>COVIDA</td>
+                <td>-11.993549683</td>
+                <td>-77.079287592</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>32</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>31</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>DOSCIENTAS MILLAS</td>
+                <td>-11.99387106</td>
+                <td>-77.12457877</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>EL OLIVAR</td>
+                <td>-12.02069008</td>
+                <td>-77.09421912</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>LOS ALAMOS</td>
+                <td>-11.874459</td>
+                <td>-77.110478</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>MI PERU</td>
+                <td>-11.85535772</td>
+                <td>-77.12644201</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>PEDRO BELTRÁN</td>
+                <td>-11.87575992</td>
+                <td>-77.1279185</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Jeffery Arroyo Chunga</td>
+                <td>VILLA SOL</td>
+                <td>-11.96927608</td>
+                <td>-77.07380663</td>
+                <td>LOS CEDROS</td>
+                <td>-11.83395424</td>
+                <td>-77.13954791</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Arica Alquiler</td>
+                <td>-12.165337</td>
+                <td>-76.919638</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LA CAMPIÑA 1 & 2</td>
+                <td>-12.17519997</td>
+                <td>-77.00244427</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS DELICIAS</td>
+                <td>-12.19777934</td>
+                <td>-76.9888105</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS PALMERAS</td>
+                <td>-12.1729052</td>
+                <td>-76.97928733</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>LAS VILLAS</td>
+                <td>-12.1899198</td>
+                <td>-77.00924933</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>NUEVA ESPERANZA</td>
+                <td>-12.17661217</td>
+                <td>-76.93626001</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>TABLADA DE LURIN</td>
+                <td>-12.19043265</td>
+                <td>-76.92238569</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>Unión</td>
+                <td>-12.170701</td>
+                <td>-76.950726</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>VILLA EL SALVADOR 1</td>
+                <td>-12.192735</td>
+                <td>-76.946064</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Juan Carlos Flores</td>
+                <td>VILLA EL SALVADOR 2, Bolivar</td>
+                <td>-12.21724108</td>
+                <td>-76.93794251</td>
+                <td>VILLA MARIA</td>
+                <td>-12.16321882</td>
+                <td>-76.9494706</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Belaúnde</td>
+                <td>-11.94457904</td>
+                <td>-77.04851587</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Carabayllo</td>
+                <td>-11.965855</td>
+                <td>-77.057977</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Collique</td>
+                <td>-11.91969821</td>
+                <td>-77.02732511</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>1</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>Comas 1</td>
+                <td>-11.95865246</td>
+                <td>-77.04743973</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>El Retablo</td>
+                <td>-11.930202361</td>
+                <td>-77.055423749</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Alborada</td>
+                <td>-11.90739</td>
+                <td>-77.041642</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Habana</td>
+                <td>-11.96060759</td>
+                <td>-77.04223842</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Manuel Fernandez Bramon</td>
+                <td>La Mar</td>
+                <td>-11.94829175</td>
+                <td>-77.05488576</td>
+                <td>Vista Alegre (Sin uso)</td>
+                <td>-11.9423354</td>
+                <td>-77.04028618</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>TARAPACA</td>
+                <td>-12.054405439</td>
+                <td>-77.109797441</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>BELLO HORIZONTE</td>
+                <td>-12.04053773</td>
+                <td>-77.06602871</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>FAUCETT</td>
+                <td>-12.03177</td>
+                <td>-77.09585</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>15</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LA PERLA</td>
+                <td>-12.07228956</td>
+                <td>-77.12289545</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Las Américas</td>
+                <td>-12.030425</td>
+                <td>-77.067928</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>2</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>Lima</td>
+                <td>-12.034119</td>
+                <td>-77.078629</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>12</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>LOBITOS</td>
+                <td>-12.04630764</td>
+                <td>-77.10159611</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>OLIVOS</td>
+                <td>-12.0385416</td>
+                <td>-77.0857089</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Marcelo Perez</td>
+                <td>PESCADORES</td>
+                <td>-12.06194289</td>
+                <td>-77.11281856</td>
+                <td>San Miguel</td>
+                <td>-12.08797</td>
+                <td>-77.078069</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>INDEPENDENCIA</td>
+                <td>-11.99744</td>
+                <td>-77.056378</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>16</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>18</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LAS MAGNOLIAS</td>
+                <td>-12.032969</td>
+                <td>-76.996817</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>8</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>10</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Ama Kella</td>
+                <td>-12.02303</td>
+                <td>-77.07972</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>ANTARES</td>
+                <td>-12.0142405</td>
+                <td>-77.08297563</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>3</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>EL TREBOL</td>
+                <td>-12.00753609</td>
+                <td>-77.06789026</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>FIORI</td>
+                <td>-12.010371029</td>
+                <td>-77.056584995</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>5</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>Las Violetas 1</td>
+                <td>-11.997282</td>
+                <td>-77.055616</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Nefi Luchini</td>
+                <td>LOS PIONEROS  (SIN USO)</td>
+                <td>-11.99194268</td>
+                <td>-77.04743487</td>
+                <td>Palao</td>
+                <td>-12.026283</td>
+                <td>-77.061308</td>
+                <td>9</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>13</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>52</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>46</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>49</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>78</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>BEGONIAS</td>
+                <td>-12.00510186</td>
+                <td>-77.00339167</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>26</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>63</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>56</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>59</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>83</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>87</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CHINCHAYSUYO</td>
+                <td>-11.97822704</td>
+                <td>-77.05150043</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>62</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>56</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>59</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>83</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>87</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>32</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CONTISUYO (Demolido)</td>
+                <td>-11.98891031</td>
+                <td>-77.05808688</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>61</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>54</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>57</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>81</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>19</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>85</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>31</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>DESERET</td>
+                <td>-11.97846081</td>
+                <td>-77.03841068</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>53</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>48</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>51</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>75</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>11</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>79</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>23</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>26</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>LOS MANZANOS</td>
+                <td>-12.00838949</td>
+                <td>-77.01703032</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>27</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>62</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>56</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>58</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>82</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>86</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>32</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>OLAYA</td>
+                <td>-11.97326865</td>
+                <td>-77.04474998</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>55</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>49</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>52</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>76</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>14</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>80</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>28</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VIÑA</td>
+                <td>-11.99513842</td>
+                <td>-77.01439851</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>29</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>55</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>59</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>80</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>45</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>83</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>47</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>47</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>CIENEGUILLA</td>
+                <td>-12.114135</td>
+                <td>-76.810586</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>48</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>46</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>71</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>75</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>HUAYCAN</td>
+                <td>-12.011872</td>
+                <td>-76.820806</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>45</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>45</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>45</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>MORON</td>
+                <td>-11.987417</td>
+                <td>-76.811314</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>45</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>PIEROLA</td>
+                <td>-11.941835</td>
+                <td>-76.706597</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>70</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>17</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>SAN CAYETANO</td>
+                <td>-12.056628</td>
+                <td>-77.006932</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>San Fernando</td>
+                <td>-11.935106</td>
+                <td>-76.689532</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>74</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>20</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>TILDA</td>
+                <td>-12.029643</td>
+                <td>-76.933597</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>21</td>
+            </tr>
+        
+            <tr>
+                <td>Vacante</td>
+                <td>VALLE GRANDE - GRUPO ALQUILER</td>
+                <td>-12.036216</td>
+                <td>-76.919615</td>
+                <td>VITARTE</td>
+                <td>-12.025366</td>
+                <td>-76.915082</td>
+                <td>22</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>33</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>35</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>34</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Libertad</td>
+                <td>-12.07391</td>
+                <td>-77.112613</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>42</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>39</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Callao</td>
+                <td>-12.063049</td>
+                <td>-77.13634</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>4</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>6</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Campoy</td>
+                <td>-12.024764</td>
+                <td>-76.967572</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>39</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>26</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>25</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>Instituto de Religión Universitario</td>
+                <td>-12.058884</td>
+                <td>-77.075325</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>36</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>43</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>38</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>La Chalaca Terreno Sin Uso</td>
+                <td>-12.02347083</td>
+                <td>-77.13837997</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>41</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>LA PUNTA</td>
+                <td>-12.06339041</td>
+                <td>-77.1457366</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>40</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>7</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>MANGOMARCA</td>
+                <td>-12.011424</td>
+                <td>-76.98183</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>37</td>
+            </tr>
+        
+            <tr>
+                <td>Walter Castro</td>
+                <td>PORTADA DEL SOL</td>
+                <td>-12.023719</td>
+                <td>-76.996683</td>
+                <td>Santa Marina</td>
+                <td>-12.05446</td>
+                <td>-77.13034</td>
+                <td>36</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
