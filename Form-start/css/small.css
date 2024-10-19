@@ -92,6 +92,7 @@ main {
     width: 100%;
     max-width: 400px;
     appearance: none;
+    /*Esto elimina el comportamiento por default de los navegadores para que no sobreescriban mis estilos*/
 }
 
 .wf1 input[type="radio"],
