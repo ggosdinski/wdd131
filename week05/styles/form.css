@@ -1,0 +1,132 @@
+/* Añade esta línea para importar Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+    margin: 20px;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffebee); /* Degradado de color */
+    color: #333;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between the checkbox/radio and the label */
+}
+
+#rating {
+    display: flex; /* Align stars horizontally */
+}
+
+input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+.star {
+    font-size: 30px; /* Size of the stars */
+    color: #ccc; /* Default color for unselected stars */
+    cursor: pointer; /* Show pointer on hover */
+    transition: color 0.2s; /* Smooth transition */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #ffa500; /* Color when hovered */
+}
+
+input[type="radio"]:checked ~ .star {
+    color: #ffa500; /* Color when checked */
+}
+
+input[type="radio"]:checked + .star {
+    color: #ffa500; /* Color for the selected star */
+}
+
+.container{
+    text-align: center;
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Aumenta el tamaño y aplica negrita a los legend */
+fieldset legend, .title {
+    font-size: 1.2em; /* Aumenta el tamaño de fuente */
+    font-weight: bold; /* Aplica negrita */
+}
+
+/* Reduce el margen del párrafo en el fieldset */
+fieldset p {
+    margin: 5px 0 15px; /* Reduce el margen superior y mantén el inferior */
+}
+
+input[type="submit"] {
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; /* Añade un poco de padding horizontal */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block; /* Para asegurarse de que el botón se centre correctamente */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 4px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.button:hover {
+    background-color: #45a049; /* Color del botón al pasar el mouse */
+}
+
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}

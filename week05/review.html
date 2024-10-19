@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submission</title>
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Review!</h1>
+        <p>Your feedback is valuable to us. We appreciate your time in sharing your thoughts.</p>
+
+        <p>You have completed <span id="review-counter"></span> reviews.</p>
+
+        <div style="text-align: center;">
+            <a href="form.html" class="button">Submit Another Review</a>
+        </div>
+    </div>
+
+    <footer >
+        <p>&copy; <span id="currentyear"></span> Gianfranco Gosdinski. Lima, Perú</p>
+        <p id="lasModified"></p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="./scripts/getdates.js"></script>
+    <script>
+        // Código para mostrar el contador de reseñas
+        document.addEventListener("DOMContentLoaded", function() {
+            let reviewCount = localStorage.getItem("reviewCount") || 0;
+            document.getElementById("review-counter").textContent = reviewCount;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+<body>
+    <h1>Product Review Form</h1>
+
+    <form action="review.html" method="get">
+        <label class="title" for="product-name">Product Name:</label>
+        <select id="product-name" name="product-name" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <label class="title" >Overall Rating:</label>
+        <div id="rating">
+            <input type="radio" id="star1" name="rating" value="1" required>
+            <label for="star1" class="star">☆</label>
+            
+            <input type="radio" id="star2" name="rating" value="2" required>
+            <label for="star2" class="star">☆</label>
+            
+            <input type="radio" id="star3" name="rating" value="3" required>
+            <label for="star3" class="star">☆</label>
+            
+            <input type="radio" id="star4" name="rating" value="4" required>
+            <label for="star4" class="star">☆</label>
+            
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5" class="star">☆</label>
+        </div>
+
+
+        <label class="title" for="installation-date">Date of Installation:</label>
+        <input type="date" id="installation-date" name="installation-date" required>
+
+        <fieldset>
+            <legend>Useful Features:</legend>
+            <p class="p">Which features did you find useful in the product? (Check all that apply)</p>
+            <label for="feature1">
+                <input type="checkbox" id="feature1" name="features" value="Durability">
+                Durability
+            </label>
+            <label for="feature2">
+                <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                Ease of Use
+            </label>
+            <label for="feature3">
+                <input type="checkbox" id="feature3" name="features" value="Performance">
+                Performance
+            </label>
+            <label for="feature4">
+                <input type="checkbox" id="feature4" name="features" value="Design">
+                Design
+            </label>
+        </fieldset>
+
+        <label class="title"  for="written-review">Written Review:</label>
+        <textarea id="written-review" name="written-review" rows="4" cols="50"></textarea>
+
+        <label class="title"  for="user-name">Your Name:</label>
+        <input type="text" id="user-name" name="user-name">
+
+        <div style="text-align: center;">
+            <input type="submit" value="Send my review">
+        </div>
+    </form>
+
+    <footer >
+        <p>&copy; <span id="currentyear"></span> Gianfranco Gosdinski. Lima, Perú</p>
+        <p id="lasModified"></p>
+    </footer>
+
+    <script src="./scripts/form.js"></script>
+    <script src="./scripts/getdates.js"></script>
+    <script>
+        // Incrementa el contador de reseñas en localStorage
+        document.querySelector("form").addEventListener("submit", function() {
+            // Verifica si existe el contador en localStorage
+            let reviewCount = localStorage.getItem("reviewCount") || 0;
+            
+            // Convierte a número y añade 1
+            reviewCount = Number(reviewCount) + 1;
+            
+            // Guarda el nuevo valor en localStorage
+            localStorage.setItem("reviewCount", reviewCount);
+        });
+    </script>
+    
+</body>
+</html>
