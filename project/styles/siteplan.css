@@ -1,0 +1,365 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+   /*  border: 1px solid red */
+}
+
+h2
+
+h3 {
+    color: #C8102E; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.cta-btn {
+    background-color: #e7ca00; 
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+header {
+    background-color: #C8102E; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.hero {
+    background-image: url('../images/lomoSaltado.webp');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: auto;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+}
+
+.introduction, .reservations {
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+/* Wireframes Section */
+.wireframes {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.wireframe-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Chef's Special Section */
+.chefs-special {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f9f1da;
+    border-radius: 8px;
+}
+
+.chefs-special p {
+    margin: 10px 0;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.customer-reviews blockquote {
+    font-style: italic;
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border-left: 4px solid #C8102E;
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+/* Cultural Highlights Section */
+.cultural-highlights {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f9f1da;
+    border-radius: 8px;
+}
+
+.cultural-highlights p {
+    margin: 10px 0;
+}
+
+/* Location and Hours Section */
+.location-hours {
+    text-align: center;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.location-hours p {
+    margin: 5px 0;
+}
+
+.location-hours a.cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+
+#backToTop {
+    position: fixed; /* Mantiene el botón en su lugar incluso al desplazarse */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #ff7f50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    display: flex; /* Permite centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#backToTop:hover {
+    background-color: #ff6347;
+}
+
+
+/* Redes Sociales en el Footer */
+footer p {
+    margin: 5px 0;
+}
+
+
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #C8102E; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Menu*/
+.menu-grid {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns layout */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    max-height: 400px; /* Altura máxima para mantener consistencia */
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+/* Ensure images maintain the same aspect ratio */
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images are cropped to fit the container */
+    border-bottom: 3px solid #e7ca00;
+}
+
+.menu-item h3 {
+    color: #C8102E;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    margin: 10px;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #C8102E;
+    margin-bottom: 20px;
+}
+
+.favorite-btn{
+    margin: 10px;
+}
+
+/* Reservations*/
+.reservations {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.reservations form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear a la izquierda */
+    gap: 10px; /* Espacio entre elementos */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservations label {
+    margin-bottom: 5px; /* Espacio entre label e input */
+    font-weight: bold; /* Hacer el texto del label más prominente */
+}
+
+.reservations input, .reservations textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reservations button {
+    background-color: #e7ca00; 
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border: white;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 300px; /* Ancho de la tarjeta */
+    margin-bottom: 90px;
+}
+
+.contact-card h3 {
+    margin: 0 0 10px;
+}
+
+.contact-card p {
+    margin: 5px 0;
+}
+
+
+
+
+/* Responsive design for mobile */
+@media only screen and (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
+
+/* Pantallas menores a 600px */
+@media only screen and (max-width: 600px) {
+    .hero {
+        background-image: url('../images/panConChicharron.webp');
+        height: 400px;
+    };
+    
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
+/* Pantallas entre 601px y 1000px */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+    .hero {
+        background-image: url('../images/lomoSaltadoMedium.webp');
+        height: 400px;
+    }
+}

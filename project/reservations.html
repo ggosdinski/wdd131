@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservations - Sabores del Perú</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/siteplan.css">
+</head>
+<body>
+    <main>
+        <!-- Header -->
+        <header>
+            <h1>Sabores del Perú - Reservations</h1>
+            <nav>
+                <ul>
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Reservation Form -->
+        <section class="reservations">
+            <h2>Make a Reservation</h2>
+            <form id="reservation-form">
+                <label for="name" required >Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="number">Number of People:</label>
+                <input type="number" id="number" name="number" min="1" required>
+
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Reservation Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit" class="cta-btn">Reserve Now</button>
+            </form>
+
+            <div id="confirmation" style="display:none;">
+                <h3>Your reservation has been confirmed!</h3>
+                <p>Thank you for choosing Sabores del Perú. We look forward to serving you!</p>
+            </div>
+        </section>
+
+         <!-- Contact Information Card -->
+         <section class="contact-info">
+            <div class="contact-card">
+                <h3>Contact Us</h3>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@saboresdelperu.com</p>
+                <p>Address: 123 Peruvian Street, Lima, Peru</p>
+            </div>
+        </section>
+
+        <script src="./scripts/scripts.js"></script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Sabores del Perú. All rights reserved.</p>
+            <p>Follow us:</p>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        </footer>
+    </main>
+
+    <script>
+        const form = document.getElementById('reservation-form');
+        const confirmation = document.getElementById('confirmation');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+
+            // Mostrar mensaje de confirmación
+            confirmation.style.display = 'block';
+            form.reset(); // Restablecer el formulario
+        });
+    </script>
+</body>
+</html>
